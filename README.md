@@ -49,4 +49,4 @@ The Park Management System is a web application designed to help park administra
     OR
     nodemon index.js
 5. Open your browser and navigate to http://localhost:3000 to access the application.
-6. 
+   
