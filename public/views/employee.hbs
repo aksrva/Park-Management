@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="container emp">
+     <h2>Employee</h2>
+<div class="res">
+        <table>
+        <tr>
+            <th>Tasks</th>
+            <th>Status</th>
+        </tr>
+        {{#each tasks}}
+        <tr>
+            <td>
+                {{#if taskStatus}}
+                <strike>{{task}}</strike>
+                {{else}}
+                {{task}}
+                {{/if}}
+            </td>
+            <td class="status">
+                {{#if taskStatus}}   
+                <a class="{{taskStatus}}" href="employee/taskstatus?id={{_id}}&status=false">Complete</a>
+                {{else}}
+                <a class="{{taskStatus}}" href="employee/taskstatus?id={{_id}}&status=true">Incomplete</a>
+                {{/if}}
+            </td>
+        </tr>
+
+        {{/each}}
+    </table>
+</div>
+    <div class="res">
+                <table>
+            <tr>
+                <th>Total Attendance</th>
+                <th>Mark Today Attendance</th>
+            </tr>
+            <tr>
+                <td>
+                    {{#each attendance}}
+                    <a  href="void:javascript(0)" title="{{this}}">✅</a>
+                    {{/each}}
+                </td>
+                <td>
+                {{#if todayMark}}
+                    <a  href="employee/attendance">✅</a>
+                    {{else}}
+                    <a href="employee/attendance">❌</a>
+                    
+                {{/if}}
+            </td>
+            </tr>
+        </table>
+    </div>
+    <a class="btn" href="employee/employeelogout">Logout</a>
+   </div>
+</body>
+</html>

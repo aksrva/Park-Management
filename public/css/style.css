@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+.row:first-child {
+  height: 50px;
+  background-color: #111;
+  color: #fff;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.hm {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hm-sec {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.hm a {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.card {
+  min-width: 200px;
+  width: 400px;
+  background-color: #ddd;
+  height: 200px;
+  line-height: 100px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.card i {
+  font-size: 3rem;
+}
+
+/* login form */
+.login-form {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-form h2 {
+  font-size: 30px;
+}
+.login-form form {
+  background-color: #eee;
+  padding: 1rem;
+  min-width: 200;
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px #aaa;
+}
+.login-form input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+input[type="submit"] {
+  background-color: orangered;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  background-color: rgb(39, 56, 15);
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+.admin {
+  margin-top: 1rem;
+}
+table {
+  width: 100%;
+  border: 1px solid #111;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 2rem 0;
+}
+table td,
+th {
+  border: 1px solid #111;
+}
+table th {
+  background: #ddd;
+  padding: 1rem;
+}
+table td {
+  background: #eee;
+  padding: 0.5rem;
+}
+.task a {
+  padding: 5px 10px;
+  background: rgb(8, 8, 99);
+  color: #fff;
+}
+.status a {
+  background-color: orangered;
+  padding: 5px;
+  color: #fff;
+}
+.status a.true {
+  background-color: rgb(11, 121, 11);
+}
+.emp {
+  margin-top: 2vw;
+}
+
+.error {
+  font-weight: bold;
+  background-color: rgba(255, 0, 0, 0.222);
+  color: rgb(141, 9, 9);
+  padding: 3px;
+}
+#employeeId {
+  display: none;
+}
+
+.res {
+  width: 100%;
+  overflow-x: scroll;
+  margin-bottom: 2rem;
+}
+
+.res::-webkit-scrollbar {
+  height: 3px;
+  border: 1px solid #e7e7e7;
+  border-radius: 2px;
+}
+.res::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.res::-webkit-scrollbar-thumb {
+  background-color: #111;
+}

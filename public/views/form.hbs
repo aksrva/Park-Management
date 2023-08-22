@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            {{#if admin}}
+    <form action="/admin/adminlogin" method="post">
+        <h2>Login Admin</h2>
+        <input type="text" name="userId" id="userId" placeholder="Enter Email id">
+        <input type="password" name="password" id="password" placeholder="Enter password">
+        <input type="submit" value="Submit">
+    {{#if error}}
+     <p class="error">{{error}}</p>
+    {{/if}}
+    </form>
+    {{/if}}
+
+    {{#if employee}}
+    <form action="/employee/employeelogin" method="post">
+        <h2>Login Employee</h2>
+        <input type="text" name="userId" id="userId" placeholder="Enter Email id">
+        <input type="password" name="password" id="password" placeholder="Enter password">
+        <input type="submit" value="Submit">
+    {{#if error}}
+     <p class="error">{{error}}</p>
+    {{/if}}
+    </form>
+    {{/if}}
+        </div>
+    </div>
+</body>
+</html>

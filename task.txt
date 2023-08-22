@@ -1,0 +1,16 @@
+Create a program to manage a park, This program should allow the user to add staff who are responsible for maintenance. Using this program, the administrator should be able to create a routine for each staff member. Each staff member should be able to mark his attendance and time spent based on the routine. There should be a provision to deactivate the staff. if staff is deactivated, he should not be able to log in.
+
+1. Admin--- user ID, password. ✅
+2. The employee added by Admin ✅
+3. Admin will set routine for an employee to do at least three tasks, for example
+                  a- employee name, Date- (autofill) ✅
+                  b- 10 to 12 work like grass cutting, 12 to 2- watering, and 2 to 4- washroom cleaning. ✅
+4. Employee login page with user ID and password. ✅
+5. Now employees are able to mark their attendance under the column of the timesheet. ✅
+6. There should be one page to create the active or deactivated employee list for the admin, and only active employees will get tasks from the admin. ✅
+7. Only active employees can login and check their tasks. ✅
+    
+
+
+On Admin dashboard, some points you have to mention=
+Add staff,staff list, Employees status, routine, and attendance

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container admin">
+        {{!-- Add button --}}
+    <a class="btn" href="admin/addemployee">Add Employee + </a>
+    {{!-- All Employee list --}}
+    <div class="employeeList res">
+        <table>
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Employee Mobile</th>
+                <th>Employee Task</th>
+                <th>Status</th>
+                <th>Attendance</th>
+            </tr>
+        {{#each employeelist}}
+            <tr>
+                <td>{{employeeId}}</td>
+                <td>{{employeeName}}</td>
+                <td>{{employeeMobile}}</td>
+                <td class="task">
+                {{#each tasks}}
+                {{#if taskStatus}}
+                <strike>{{task}}</strike> | 
+                {{else}}
+                {{task}} |
+                {{/if}}
+                {{/each}}
+                <a href="admin/addtask?id={{employeeId}}"><span>+</span></a>
+                </td>
+                <td class="status">
+                    {{#if status}}
+                    <a href="admin/status?id={{employeeId}}" class="{{status}}">Activate</a>
+                    {{else}}
+                    <a href="admin/status?id={{employeeId}}" class="{{status}}">Deactivate</a>
+                    {{/if}}
+                </td>
+
+                <td>
+                    {{#each attendance}}
+                    <a  href="void:javascript(0)" title="{{this}}">✅</a>
+                    {{/each}}
+                </td>
+              
+            </tr>
+                    {{/each}}
+        </table>
+       
+    </div>
+            {{!-- Add button --}}
+    <a class="btn" href="admin/logoutadmin">Logout</a>
+    </div>
+</body>
+</html>
